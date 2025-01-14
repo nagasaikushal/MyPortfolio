@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>M N S Kushal</title>
+        <link rel="stylesheet" type="text/css" href="Styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    </head>
+    <body class="iceland-regular">
+        <!-- Video Background -->
+        <video autoplay muted loop id="background-video">
+            <source src="bg-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <header>
+            <h1 style="color: azure;">M N S KUSHAL</h1>
+            <!-- Social Media Links -->
+            <div style="text-align:left;">
+                <a href="https://www.linkedin.com/in/yourprofile" style="margin: 0 10px;">
+                    <img src="linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+                </a>
+                <a href="https://github.com/yourprofile"  style="margin: 0 10px;">
+                    <img src="github.png" alt="GitHub" style="width: 40px; height: 40px;">
+                </a>
+            </div>
+            <nav>
+                <ul style="list-style-type: none;">
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Certifications.html">Certifications</a></li>
+                    <li><a href="Skills.html">Skills</a></li>
+                    <li><a href="Interests.html">Interests</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="About" id="About" style="display: flex; justify-content: flex-end;">
+            <pre>
+            <b>Born:</b> 2004, Hyderabad, India  
+            <b>Studying:</b> B.Tech in CSE (Cybersecurity)  
+            <b>Graduation Year:</b> 2026  
+            <b>Current CGPA:</b> 9.24
+                
+            <b>Passions:</b>  
+            <b>Cybersecurity: </b>
+                    It's a cool job, filled with new challenges 
+                    and creative ways to tackle attacks.  
+            <b>Web Development:</b> 
+                    The colors, animations, 
+                    and tech behind these websites excite me.  
+                
+            Both fields give me endless dopamine 
+            and motivation to keep exploring.
+            </pre>
+        </div>
+
+        <div class="Resume">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Kushal_CV_V3.pdf" class="download-link" download="Kushal_CV_V3.pdf">Download Resume</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="Kushal_CV_V3.pdf" class="download-link" download="Kushal_CV_V3.pdf">Download CV</a>
+        </div>
+
+        <style>
+            /* Style to ensure the video is displayed full-screen */
+            #background-video {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures the video covers the full screen */
+                z-index: -1; /* Places the video behind the content */
+            }
+
+            /* Links and icons styling */
+            a img {
+                filter: brightness(0) invert(1); /* Ensures the icons are white */
+            }
+        </style>
+
+        <script>
+            // Check if video can be played, otherwise show the fallback
+            var video = document.getElementById('background-video');
+            video.onerror = function() {
+                alert('Video background could not be loaded.');
+            };
+        </script>
+    </body>
+</html>

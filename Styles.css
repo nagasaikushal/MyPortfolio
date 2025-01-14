@@ -1,0 +1,65 @@
+*{  
+    color: white;
+}
+.iceland-regular {
+    font-family: "Iceland", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:x-large;
+}
+
+body{
+    border-color: antiquewhite;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+nav {
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+nav ul,li {
+    margin-top: 10px;
+
+}   
+nav a {
+    text-decoration-color: yellow;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background-color: #007BFF;
+    border-radius: 5px;
+}
+header{
+    text-align: Left;
+
+    
+}
+.Contact {
+    text-align: center;
+    font-size: 20px;
+}
+.about{
+    background-color: azure;
+    text-align: right;
+}
+.Resume a{
+    text-align: left;
+    padding-right: 20px;
+    background-color: yellow;
+    color: black;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.Resume a:hover{
+    padding: 5px 10px;
+    background-color: #007BFF;
+    border-radius: 10px;
+}
+b{
+    color: yellow;
+}
