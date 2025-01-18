@@ -1,8 +1,12 @@
-/* General styles */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,17 +15,20 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Header and Navigation */
 header {
     background-color: #FF8C00;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     gap: 15px;
 }
 
@@ -31,13 +38,15 @@ nav a {
     padding: 8px 16px;
     border-radius: 5px;
     font-size: 18px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #333;
+    background-color: #00011d;
     color: white;
 }
 
+/* About Section */
 .About {
     display: flex;
     justify-content: space-between;
@@ -60,6 +69,7 @@ nav a:hover {
     object-fit: cover;
 }
 
+/* Resume Section */
 .Resume {
     text-align: center;
     margin: 20px 0;
@@ -71,28 +81,105 @@ nav a:hover {
     color: white;
     border-radius: 5px;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .download-link:hover {
-    background-color: #333;
+    background-color: #00011d;
 }
 
+/* Project Section */
 .project-cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
 }
 
 .project-card {
-    background-color: #fff;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #FF8C00;
+}
+
+.project-card-content {
+    padding: 20px;
+}
+
+.project-card h3 {
+    color: #FF8C00;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-card h4 {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-card ul {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.project-card li {
+    margin-bottom: 8px;
+}
+
+.project-card-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.project-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+}
+
+.demo-btn {
+    background-color: #FF8C00;
+    color: white;
+}
+
+.project-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Cards (Certifications & Skills) */
 .card-container {
     display: flex;
     gap: 20px;
@@ -108,26 +195,43 @@ nav a:hover {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
     width: 120px;
-    height: 22 0px;
+    height: 120px;
+    object-fit: contain;
 }
 
 .card-content h3 {
     font-size: 20px;
     margin-top: 10px;
+    color: #00011d;
+}
+
+/* Footer */
+footer {
+    background-color: #00011d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
 }
 
 .social-links {
     text-align: center;
-    margin-top: 30px;
+    margin: 30px 0;
 }
 
 .social-links a {
     margin: 0 10px;
     display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .social-links img {
@@ -136,11 +240,8 @@ nav a:hover {
     border-radius: 20px;
 }
 
-footer {
-    background-color: #00011d;
-    color: white;
-    padding: 10px;
-    text-align: center;
+.social-links a:hover {
+    transform: translateY(-5px);
 }
 
 footer a {
@@ -154,24 +255,6 @@ footer a:hover {
 
 /* Section Headings */
 h2 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #FF8C00;
-    margin-bottom: 20px;
-    text-align: center;
-    border-bottom: 2px solid #FF8C00;
-    padding-bottom: 5px;
-}
-
-/* Project Cards Heading */
-.project-card h3, .card-content h3 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #00011d;
-}
-
-/* Section Heading (Certifications and Skills) */
-.Skills h2, .Certifications h2, .Projects h2 {
     font-size: 30px;
     font-weight: 700;
     color: #FF8C00;
@@ -179,4 +262,162 @@ h2 {
     border-bottom: 3px solid #FF8C00;
     padding-bottom: 10px;
     margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    nav a {
+        display: block;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* About */
+    .About {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .content-container {
+        width: 100%;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    /* Projects */
+    .project-cards {
+        padding: 10px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .project-card-buttons {
+        flex-direction: column;
+    }
+
+    .project-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Cards */
+    .card {
+        width: calc(50% - 15px);
+        min-width: 140px;
+        padding: 15px;
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Skills .card {
+        width: calc(33.33% - 15px);
+    }
+
+    /* Footer */
+    .social-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .social-links img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+
+    .Skills .card {
+        width: calc(50% - 15px);
+    }
+
+    .social-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.Achievements {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.achievements-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.achievement-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-card img {
+    height: 60px;
+    width: auto;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.achievement-content h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.achievement-content p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #555;
 }
